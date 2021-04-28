@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+   		   
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       
+	   		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+          
+          
+       
+        
+     <bean id="dbhelper" class="com.proje.db.DbHelper">
+           
+           <property name="usr" value="root"/>
+           <property name="pass" value="1234"/>
+           
+           
+           <property name="list">
+           	 <list>
+           		<value>min 5 conn</value>
+           		<value>max 100 conn</value>
+           		<value>100 statement can cach</value>
+           	 </list>
+          </property>
+           
+           
+           <property name="map">
+           	<map>
+				<entry key="min_conn" value="5"/>
+				<entry key="max_conn" value="100"/>
+				<entry key="max_cache_statement" value="100"/>		           
+           	</map>           
+           </property> 
+           
+           
+           <property name="props">
+            <props>
+				<prop key="user">root</prop>            
+            	<prop key="pass">1234</prop>
+            	<prop key="url">jdbc:mysql://localhost:3036/cities</prop>
+            </props>				
+           </property>
+           
+           
+     </bean>
+          
+          
+          
+          
+			
+</beans>
